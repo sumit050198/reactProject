@@ -36,10 +36,10 @@ const clearToClick = () => {
       <div className="mb-3">
         <textarea className="form-control" value={text} onChange={handleOnChange} style={{backgroundColor: props.mode==='dark'?'gray':'white', color: props.mode === 'dark'?'white':'black'}} id="myBox" rows="6"></textarea>
       </div>
-      <button className="btn btn-primary mx-0" onClick={handleUpClick}>Convert to Uppercase</button>
-      <button className="btn btn-primary mx-2 my-2" onClick={handleLoClick}>Convert to Lowercase</button>
-      <button className="btn btn-primary mx-2" onClick={clearToClick}>Clear Text</button>
-      <button className="btn btn-primary mx-2 my-2" onClick={handleToCopy}>Copy Text</button>
+      <button className="btn btn-primary me-1" onClick={handleUpClick}>Convert to Uppercase</button>
+      <button className="btn btn-primary me-1 my-2" onClick={handleLoClick}>Convert to Lowercase</button>
+      <button className="btn btn-primary me-0" onClick={clearToClick}>Clear Text</button>
+      <button className="btn btn-primary me-1 my-2" onClick={handleToCopy}>Copy Text</button>
       <div className="container my-3" style={{color: props.mode ==='dark'?'white':'black'}}>
         <h1>Your text summary</h1>
         <p>{text.split(" ").length} words and {text.length} characters</p>
