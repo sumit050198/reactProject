@@ -11,12 +11,12 @@ export default function Navbar(props) {
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul className="navbar-nav me-auto mb- mb-lg-0">
           <li className="nav-item">
             <a className="nav-link active" aria-current="page" href="./TextForm">Home</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link active" href="/">{props.about}</a>
+            <a className="nav-link active" href="/">About Us</a>
           </li>
           <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle active" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -32,6 +32,9 @@ export default function Navbar(props) {
           <li className="nav-item">
             <a className="nav-link disabled" aria-disabled="true">Disabled</a>
           </li>
+        <li className="nav-item">
+          <a className="nav-link active" href="/">{props.about}</a>
+        </li>
         </ul>
         {/* <form className="d-flex" role="search">
           <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search "/>
@@ -39,7 +42,7 @@ export default function Navbar(props) {
         </form> */}
         <div class={`form-check form-switch text-${props.mode === 'light'?'dark':'light'}`}>
           <input className="form-check-input" onClick = {props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-          <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Enable Lightmode</label>
+          <label className="form-check-label" htmlFor="flexSwitchCheckDefault"></label>
         </div>
       </div>
     </div>
