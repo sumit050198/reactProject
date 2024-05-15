@@ -16,16 +16,17 @@ export default function TextForm(props) {
     setText(newText);
   }
 
-const clearToClick = () => {
-  let newText = '';
-  setText(newText);
-}
   const handleToCopy = () => {
     let text = document.getElementById("myBox");
     text.select();
     navigator.clipboard.writeText(text.value);
 
   }
+  
+const clearToClick = () => {
+  let newText = '';
+  setText(newText);
+}
   const handleOnChange = (event) => {
     setText(event.target.value);
   }
@@ -38,8 +39,8 @@ const clearToClick = () => {
       </div>
       <button className="btn btn-primary me-1" onClick={handleUpClick}>Convert to Uppercase</button>
       <button className="btn btn-primary me-1 my-2" onClick={handleLoClick}>Convert to Lowercase</button>
-      <button className="btn btn-primary me-0" onClick={clearToClick}>Clear Text</button>
       <button className="btn btn-primary me-1 my-2" onClick={handleToCopy}>Copy Text</button>
+      <button className="btn btn-primary me-0" onClick={clearToClick}>Clear Text</button>
       <div className="container my-3" style={{color: props.mode ==='dark'?'white':'black'}}>
         <h1>Your text summary</h1>
         <p>{text.split(" ").length} words and {text.length} characters</p>
